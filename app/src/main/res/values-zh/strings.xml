@@ -50,7 +50,7 @@
     <string name="fingerprint_success">验证成功</string>
     <string name="fingerprint_faild">验证失败</string>
 
-    <string name="official_web">v.systems</string>
+    <string name="official_web">t.top</string>
     <!--other end-->
 
     <!-- start>>>  home list (wallet list /monitor list) -->
@@ -252,6 +252,6 @@
 
     <!--init start-->
     <string name="wallet_init_official_warning_dialog_msg">为保证您的个人财产安全，请务必确保您的钱包APP来自TV官方网站下载</string>
-    <string name="first_enter_tips">您可以准备一个几乎不使用和可以完全断网的手机，从v.systems官网下载冷钱包。</string>
+    <string name="first_enter_tips">您可以准备一个几乎不使用和可以完全断网的手机，从t.top官网下载冷钱包。</string>
     <!--init end-->
 </resources>
