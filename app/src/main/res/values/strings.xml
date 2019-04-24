@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Walk Wallet</string>
+    <string name="app_name">TV Wallet</string>
     <string name="nav_wallet">Wallet</string>
     <string name="nav_settings">Settings</string>
     <string name="confirm">Confirm</string>
@@ -18,7 +18,7 @@
     <string name="scan_tip">Align QR code within frame to scan</string>
     <string name="next_step">Next</string>
     <string name="clear">Clear</string>
-    <string name="welcome_use">Welcome to WALK WALLET</string>
+    <string name="welcome_use">Welcome to TV WALLET</string>
     <string name="welcome_tips">Please create or import your wallet</string>
     <string name="password_input">Enter Password</string>
     <string name="password_input_tips">Please enter the password of the wallet</string>
@@ -43,8 +43,8 @@
     <string name="log_out_wallet_tips">Before you cancel your wallet, please make sure that you have recorded your mnemonic words. Once you cancel your wallet, you cannot find it without mnemonic words.</string>
     <string name="continue_input">Continue input</string>
 
-    <string name="fingerprint_title">Touch ID for “Walk Wallet”</string>
-    <string name="fingerprint_tips">Unlock Walk Wallet</string>
+    <string name="fingerprint_title">Touch ID for “TV Wallet”</string>
+    <string name="fingerprint_tips">Unlock TV Wallet</string>
     <string name="fingerprint_disable">Fingerprint verification is not supported</string>
     <string name="fingerprint_no_data">No fingerprints entered</string>
     <string name="fingerprint_success">Successful verification</string>
@@ -161,7 +161,7 @@
 
     <!--wallet create start-->
     <string name="wallet_set_password">Set password</string>
-    <string name="wallet_create_tips">Walk Wallet does not store your password.It cannot be recovered if forgotten.Please keep it properly</string>
+    <string name="wallet_create_tips">TV Wallet does not store your password.It cannot be recovered if forgotten.Please keep it properly</string>
     <string name="wallet_create_password_label">Create password</string>
     <string name="wallet_create_password_tips">At least 8 characters</string>
     <string name="wallet_create_comfirm_password_label">Confirm password</string>
