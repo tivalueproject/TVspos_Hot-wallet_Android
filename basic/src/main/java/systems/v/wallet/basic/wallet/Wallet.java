@@ -13,7 +13,8 @@ import systems.v.vsys.Vsys;
 public class Wallet {
 
     public static final String TEST_NET = Vsys.NetworkTestnet;
-    public static final String MAIN_NET = Vsys.NetworkMainnet;
+    //public static final String MAIN_NET = Vsys.NetworkMainnet;
+    public static final String MAIN_NET = "M";
 
     private String seed = "";
     private long nonce = 0;
@@ -21,6 +22,7 @@ public class Wallet {
     private String network = MAIN_NET;
     private String password;
     private String salt;
+    private String version = "1";
 
     @JSONField(serialize = false)
     private ArrayList<Account> accounts = new ArrayList<>();
@@ -58,7 +60,7 @@ public class Wallet {
         if (num > 0) {
             for (long i = nonce; i < nonce + num; i++) {
                 systems.v.vsys.Wallet wallet = Vsys.newWallet(seed, network);
-                Account account = new Account(seed, nonce, network, wallet.generateAccount(i));
+                Account account = new Account(seed, nonce, network, version, wallet.generateAccount(i));
                 Log.d(TAG, account.toString());
                 accounts.add(account);
             }
@@ -72,7 +74,7 @@ public class Wallet {
         systems.v.vsys.Wallet wallet = Vsys.newWallet(seed, network);
         accounts.clear();
         for (long i = 0; i < nonce; i++) {
-            Account account = new Account(seed, nonce, network, wallet.generateAccount(i));
+            Account account = new Account(seed, nonce, network,version, wallet.generateAccount(i));
             Log.d(TAG, account.toString());
             accounts.add(account);
         }
