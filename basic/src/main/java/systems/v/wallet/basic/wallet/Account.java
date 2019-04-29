@@ -48,15 +48,15 @@ public class Account implements AccountBalance {
         Curve25519KeyPair pair = cipher.generateKeyPair();
 
         byte[] btPublicKey = Vsys.hashChain(pair.getPublicKey());
-        byte[] btWithoutCheck = new byte[22];
+        byte[] btWithoutCheck = new byte[Wallet.AddressLength - Wallet.ChecksumLength];
         btWithoutCheck[0] = (byte)(Integer.parseInt(version));
         btWithoutCheck[1] = network.getBytes()[0];
-        System.arraycopy(btPublicKey, 0, btWithoutCheck, 2, 20);
+        System.arraycopy(btPublicKey, 0, btWithoutCheck, 2, Wallet.HashLength);
 
         byte[] btCheck = Vsys.hashChain(btWithoutCheck);
-        byte[] btAddress = new byte[26];
-        System.arraycopy(btWithoutCheck, 0, btAddress, 0, 22);
-        System.arraycopy(btCheck, 0, btAddress, 22, 4);
+        byte[] btAddress = new byte[Wallet.AddressLength];
+        System.arraycopy(btWithoutCheck, 0, btAddress, 0, Wallet.AddressLength - Wallet.ChecksumLength);
+        System.arraycopy(btCheck, 0, btAddress, Wallet.AddressLength - Wallet.ChecksumLength, Wallet.ChecksumLength);
 
         map.put("address", Base58.encode(btAddress));
         map.put("publicKey", Base58.encode(pair.getPublicKey()));
