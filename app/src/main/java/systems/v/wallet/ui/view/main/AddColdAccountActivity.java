@@ -17,6 +17,7 @@ import androidx.databinding.DataBindingUtil;
 import systems.v.wallet.R;
 import systems.v.wallet.basic.wallet.Operation;
 import systems.v.wallet.basic.wallet.Wallet;
+import systems.v.wallet.basic.wallet.Account;
 import systems.v.wallet.databinding.ActivityAddColdAccountBinding;
 import systems.v.wallet.ui.BaseActivity;
 import systems.v.wallet.ui.view.transaction.ScannerActivity;
@@ -110,6 +111,6 @@ public class AddColdAccountActivity extends BaseActivity {
         if (!Wallet.validateAddress(address)) {
             return false;
         }
-        return Wallet.getAddress(mWallet.getNetwork(), publicKey).equals(address);
+        return Account.createAddress(publicKey,Wallet.MAIN_NET,Wallet.VERSION).equals(address);
     }
 }

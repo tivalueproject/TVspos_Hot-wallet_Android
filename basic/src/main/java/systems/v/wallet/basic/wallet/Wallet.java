@@ -16,8 +16,8 @@ public class Wallet {
 
     public static final String TEST_NET = Vsys.NetworkTestnet;
     //public static final String MAIN_NET = Vsys.NetworkMainnet;
-    public static final String MAIN_NET = "M";
-    public static final String VERSION = "1";
+    public static final String MAIN_NET = ";";
+    public static final String VERSION = "29";
 
     static final int  ChecksumLength = 4;
     static final int  HashLength = 20;
@@ -106,7 +106,7 @@ public class Wallet {
         byte[] btAddress = Base58.decode(address);
         if (btAddress[0] != Integer.parseInt(VERSION)){
             return false;
-        }else if (btAddress[1] != MAIN_NET.getBytes()[0]){
+        }else if (btAddress[1] != (byte)MAIN_NET.hashCode()){
             return false;
         }else if (btAddress.length != AddressLength){
             return false;

@@ -33,8 +33,23 @@ public class Account implements AccountBalance {
     public Account() {
     }
 
-    public Map<String, String> createAddress(String seed,long nonce ,String network,String version){
-        Map<String, String> map = new HashMap<String, String>();
+    public static String createAddress(String publicKey ,String network,String version){
+        byte[] btDecode = Base58.decode(publicKey);
+        byte[] btPublicKey = Vsys.hashChain(btDecode);
+        byte[] btWithoutCheck = new byte[Wallet.AddressLength - Wallet.ChecksumLength];
+        btWithoutCheck[0] = (byte)(Integer.parseInt(version));
+        btWithoutCheck[1] = (byte)network.hashCode();
+        System.arraycopy(btPublicKey, 0, btWithoutCheck, 2, Wallet.HashLength);
+
+        byte[] btCheck = Vsys.hashChain(btWithoutCheck);
+        byte[] btAddress = new byte[Wallet.AddressLength];
+        System.arraycopy(btWithoutCheck, 0, btAddress, 0, Wallet.AddressLength - Wallet.ChecksumLength);
+        System.arraycopy(btCheck, 0, btAddress, Wallet.AddressLength - Wallet.ChecksumLength, Wallet.ChecksumLength);
+
+        return Base58.encode(btAddress);
+    }
+
+    public static String createAddress(String seed,long nonce ,String network,String version){
         String strSeed = String.valueOf(nonce) + seed;
         byte[] btSeed = Vsys.hashChain(strSeed.getBytes());
 
@@ -50,7 +65,7 @@ public class Account implements AccountBalance {
         byte[] btPublicKey = Vsys.hashChain(pair.getPublicKey());
         byte[] btWithoutCheck = new byte[Wallet.AddressLength - Wallet.ChecksumLength];
         btWithoutCheck[0] = (byte)(Integer.parseInt(version));
-        btWithoutCheck[1] = network.getBytes()[0];
+        btWithoutCheck[1] = (byte)network.hashCode();
         System.arraycopy(btPublicKey, 0, btWithoutCheck, 2, Wallet.HashLength);
 
         byte[] btCheck = Vsys.hashChain(btWithoutCheck);
@@ -58,10 +73,7 @@ public class Account implements AccountBalance {
         System.arraycopy(btWithoutCheck, 0, btAddress, 0, Wallet.AddressLength - Wallet.ChecksumLength);
         System.arraycopy(btCheck, 0, btAddress, Wallet.AddressLength - Wallet.ChecksumLength, Wallet.ChecksumLength);
 
-        map.put("address", Base58.encode(btAddress));
-        map.put("publicKey", Base58.encode(pair.getPublicKey()));
-
-        return map;
+        return Base58.encode(btAddress);
     }
 
     public Account(String seed, long nonce, String network,String version, systems.v.vsys.Account account) {
@@ -69,9 +81,8 @@ public class Account implements AccountBalance {
         this.nonce = nonce;
         this.network = network;
         this.account = account;
-        Map<String, String> map = createAddress(seed,nonce,network,version);
-        this.address = map.get("address");
-        this.publicKey = map.get("publicKey");
+        this.address = createAddress(seed,nonce,network,version);
+        this.publicKey = account.publicKey();
     }
 
     public void updateBalance(AccountBalance balance) {
