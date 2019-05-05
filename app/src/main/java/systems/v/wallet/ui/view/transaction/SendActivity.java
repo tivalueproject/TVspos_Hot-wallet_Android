@@ -179,14 +179,14 @@ public class SendActivity extends BaseThemedActivity implements View.OnClickList
             case R.id.btn_explain: {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://t.top/supernode"));
+                intent.setData(Uri.parse("https://supernode.t.top"));
                 mActivity.startActivity(intent);
             }
             break;
             case R.id.btn_supernode_list: {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://t.top/supernode"));
+                intent.setData(Uri.parse("https://supernode.t.top"));
                 mActivity.startActivity(intent);
             }
             break;
