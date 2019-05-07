@@ -46,13 +46,11 @@ public class WalletInitActivity extends BaseActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.btn_import:
                 // import wallet
-                //NetworkActivity.launch(mActivity, NetworkActivity.TYPE_IMPORT);
-                ImportSeedActivity.launch(mActivity);
+                NetworkActivity.launch(mActivity, NetworkActivity.TYPE_IMPORT);
                 break;
             case R.id.btn_create:
                 // create wallet
-                //NetworkActivity.launch(mActivity, NetworkActivity.TYPE_CREATE);
-                SetPasswordActivity.launch(mActivity);
+                NetworkActivity.launch(mActivity, NetworkActivity.TYPE_CREATE);
                 break;
         }
     }
