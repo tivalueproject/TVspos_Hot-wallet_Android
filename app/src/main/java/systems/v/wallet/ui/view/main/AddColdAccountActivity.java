@@ -111,6 +111,6 @@ public class AddColdAccountActivity extends BaseActivity {
         if (!Wallet.validateAddress(address)) {
             return false;
         }
-        return Account.createAddress(publicKey,Wallet.MAIN_NET,Wallet.VERSION).equals(address);
+        return Account.createAddress(publicKey,Wallet.curnetwork,Wallet.VERSION).equals(address);
     }
 }

@@ -30,6 +30,8 @@ public class Wallet {
     private String password;
     private String salt;
 
+    public static String curnetwork = MAIN_NET;
+
     @JSONField(serialize = false)
     private ArrayList<Account> accounts = new ArrayList<>();
 
@@ -49,6 +51,7 @@ public class Wallet {
 
     public Wallet(String seed, long nonce, String network, Agent agent) {
         this.network = ensureNetwork(network);
+        curnetwork = this.network;
         this.seed = seed;
         this.nonce = nonce;
         this.agent = agent.toString();
@@ -106,7 +109,7 @@ public class Wallet {
         byte[] btAddress = Base58.decode(address);
         if (btAddress[0] != Integer.parseInt(VERSION)){
             return false;
-        }else if (btAddress[1] != (byte)MAIN_NET.hashCode()){
+        }else if (btAddress[1] != (byte)curnetwork.hashCode()){
             return false;
         }else if (btAddress.length != AddressLength){
             return false;
