@@ -29,9 +29,9 @@
                 android:id="@+id/tv_index"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|end"
+                android:layout_gravity="bottom|end"
                 android:textColor="@color/color_white_5"
-                android:textSize="72sp"
+                android:textSize="40sp"
                 tools:text="01" />
 
             <LinearLayout
@@ -51,8 +51,8 @@
 
                 <ImageView
                     android:id="@+id/iv_qr_code"
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@drawable/ico_qr_code" />
             </LinearLayout>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="orange">#FF8737</color>
+    <color name="orange">#FF6565</color>
     <color name="blue">#5E78E1</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white_1">#19FFFFFF</color>
@@ -13,10 +13,10 @@
     <color name="bg_common">#FFFFFF</color>
     <color name="white_pressed">#FFE6E6E6</color>
     <color name="bg_default">@color/bg_common</color>
-    <color name="color_orange_weak">#FFA938</color>
-    <color name="color_orange_strong">#FF8737</color>
-    <color name="color_blue_weak">#708CFE</color>
-    <color name="color_blue_strong">#526BCE</color>
+    <color name="color_orange_weak">#FF6B6B</color>
+    <color name="color_orange_strong">#FF4E4E</color>
+    <color name="color_blue_weak">#FF7070</color>
+    <color name="color_blue_strong">#FF5959</color>
     <color name="color_white">#FFFFFF</color>
     <color name="text_white">@color/color_white</color>
     <color name="color_white_5">#88FFFFFF</color>

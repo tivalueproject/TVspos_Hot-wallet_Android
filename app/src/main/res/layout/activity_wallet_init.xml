@@ -31,7 +31,7 @@
                 android:maxLines="1"
                 android:text="@string/welcome_use"
                 android:textColor="@color/text_strong"
-                android:textSize="40sp"
+                android:textSize="28sp"
                 app:minTextSize="16sp" />
 
             <TextView
