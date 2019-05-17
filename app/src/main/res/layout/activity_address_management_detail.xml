@@ -84,7 +84,7 @@
                     android:layout_height="16dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="48dp"
-                    android:src="@drawable/ico_arrow_right" />
+                    android:src="@drawable/copy" />
             </LinearLayout>
 
             <TextView
@@ -122,7 +122,7 @@
                     android:layout_height="16dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="48dp"
-                    android:src="@drawable/ico_arrow_right" />
+                    android:src="@drawable/copy" />
             </LinearLayout>
 
 
