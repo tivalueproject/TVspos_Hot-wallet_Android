@@ -144,12 +144,6 @@
             </FrameLayout>
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@color/transparent" />
-
         <Button
             android:id="@+id/btn_complete"
             style="@style/BasicButton"
@@ -159,6 +153,7 @@
             android:layout_marginEnd="@dimen/normal_padding"
             android:layout_marginBottom="20dp"
             android:gravity="center"
+            android:layout_marginTop="50dp"
             android:onClick="@{click.onClick}"
             android:text="@string/confirm"
             android:textColor="@color/text_white" />

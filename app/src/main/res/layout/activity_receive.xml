@@ -61,29 +61,27 @@
                         android:id="@+id/iv_qr_code"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
-                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="12dp"
                         android:scaleType="fitXY" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/divider" />
-
-                    <TextView
-                        android:id="@+id/tv_address"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:minHeight="30dp"
-                        android:textColor="@color/text_strong"
-                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/receive_address_caption"
                         android:textColor="@color/text_weak"
+                        android:layout_marginTop="38.5dp"
+                        android:gravity="center_horizontal"
                         android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:minHeight="30dp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/text_strong"
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -91,7 +89,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:background="@drawable/bg_mask_white_2_radius_8"
                     android:orientation="vertical">
 
                     <TextView
@@ -107,7 +104,7 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
+                        android:layout_height="0.5dp"
                         android:background="@color/color_white_5" />
 
                     <TextView
