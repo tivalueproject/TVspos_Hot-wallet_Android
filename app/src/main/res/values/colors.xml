@@ -37,11 +37,11 @@
     <color name="text_red">#E63939</color>
     <color name="text_hint">@color/text_weak</color>
     <color name="text_green">#24B34A</color>
-    <color name="passwordStrength1">#BB020C</color>
-    <color name="passwordStrength2">#F46514</color>
-    <color name="passwordStrength3">#E6D20B</color>
-    <color name="passwordStrength4">#9BC714</color>
-    <color name="passwordStrength5">#19B425</color>
+    <color name="passwordStrength1">#FF6565</color>
+    <color name="passwordStrength2">#FF6565</color>
+    <color name="passwordStrength3">#2BD480</color>
+    <color name="passwordStrength4">#2BD480</color>
+    <color name="passwordStrength5">#2BD480</color>
     <color name="color_line">#E8E8ED</color>
     <color name="color_root">#FAFAFA</color>
     <color name="color_password_bg">#F5F5F5</color>
