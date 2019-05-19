@@ -38,8 +38,8 @@
                     android:paddingBottom="24dp">
 
                     <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:layout_marginEnd="@dimen/normal_padding"
                         android:src="@drawable/ico_backup_big" />
 

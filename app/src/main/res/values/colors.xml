@@ -15,8 +15,8 @@
     <color name="bg_default">@color/bg_common</color>
     <color name="color_orange_weak">#FF6B6B</color>
     <color name="color_orange_strong">#FF4E4E</color>
-    <color name="color_blue_weak">#FF7070</color>
-    <color name="color_blue_strong">#FF5959</color>
+    <color name="color_blue_weak">#0E81FF</color>
+    <color name="color_blue_strong">#0174FF</color>
     <color name="color_white">#FFFFFF</color>
     <color name="text_white">@color/color_white</color>
     <color name="color_white_5">#88FFFFFF</color>
