@@ -61,7 +61,7 @@
                 android:id="@+id/btn_create"
                 style="@style/BasicButton"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="50dp"
                 android:layout_marginBottom="@dimen/normal_padding"
                 android:text="@string/wallet_create" />
 
@@ -69,7 +69,7 @@
                 android:id="@+id/btn_import"
                 style="@style/BasicButton.Bordered.Orange"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="50dp"
                 android:text="@string/wallet_import"
                 android:theme="@style/BasicButton.Bordered.Orange" />
         </LinearLayout>
