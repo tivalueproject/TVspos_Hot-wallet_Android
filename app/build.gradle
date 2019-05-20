@@ -7,7 +7,7 @@ android {
         minSdkVersion versions.min_sdk
         targetSdkVersion versions.target_sdk
         versionCode 2
-        versionName "1.0.1"
+        versionName "1.0.4"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -35,7 +35,6 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/pgyer_sdk_3.0.4.jar')
     implementation deps.support.appcompat
     implementation deps.support.material
     implementation deps.constraintlayout
