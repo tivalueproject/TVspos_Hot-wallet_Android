@@ -61,6 +61,7 @@ public class SplashActivity extends BaseActivity {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
                                                 PgyUpdateManager.downLoadApk(appBeanEx.getDownloadURL());
+                                                launch();
                                             }
                                         })
                                         .setNegativeButton(R.string.basic_alert_dialog_cancel, new DialogInterface.OnClickListener() {
