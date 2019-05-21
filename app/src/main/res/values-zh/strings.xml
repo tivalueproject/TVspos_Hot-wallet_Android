@@ -14,6 +14,8 @@
     <string name="official_warning">官方提示</string>
     <string name="got_it">知道了</string>
 
+    <string name="update_title">发现新版本，是否立即更新</string>
+
     <!--other start-->
     <string name="next_step">下一步</string>
     <string name="clear">清空</string>
