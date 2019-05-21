@@ -1,20 +1,10 @@
 package systems.v.wallet.ui.view.wallet;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-
-import com.pgyersdk.crash.PgyCrashManager;
-import com.pgyersdk.feedback.FeedbackActivity;
-import com.pgyersdk.update.DownloadFileListener;
-import com.pgyersdk.update.PgyUpdateManager;
-import com.pgyersdk.update.UpdateManagerListener;
-import com.pgyersdk.update.javabean.AppBean;
 
 import androidx.databinding.DataBindingUtil;
 import systems.v.wallet.R;

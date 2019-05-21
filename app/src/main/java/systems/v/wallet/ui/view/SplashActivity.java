@@ -105,11 +105,7 @@ public class SplashActivity extends BaseActivity {
                             System.out.println("update download apk progress" + integers);
                         }})
                     .register();
-
-
         }
-
-
     }
 
     @Override
