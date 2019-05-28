@@ -27,13 +27,13 @@ android {
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
 
-    compile group: 'org.whispersystems', name: 'curve25519-android', version: '0.5.0'
+    implementation group: 'org.whispersystems', name: 'curve25519-android', version: '0.5.0'
 
     implementation deps.support.appcompat
     testImplementation deps.junit
     androidTestImplementation deps.atsl.runner
     androidTestImplementation deps.espresso.core
-    
+
     implementation deps.fastjson
     implementation deps.zxing_android_embedded
     implementation deps.boucnycastle
