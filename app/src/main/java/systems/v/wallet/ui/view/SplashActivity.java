@@ -62,7 +62,6 @@ public class SplashActivity extends BaseActivity {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
                                                 DownloadApp(appUrl,String.valueOf(serverVersion));
-                                                launch();
                                             }
                                         })
                                         .setNegativeButton(R.string.basic_alert_dialog_cancel, new DialogInterface.OnClickListener() {
@@ -182,23 +181,19 @@ public class SplashActivity extends BaseActivity {
         new DownloadUtil(new DownloadUtil.DownloadCallBack() {
             @Override
             public void downLoadStart(DownloadUtil.DownloadParam param) {
-//                pb_update.setVisibility(View.VISIBLE);
-//                tv_update.setVisibility(View.GONE);
+                showLoading();
             }
 
             @Override
             public void onProgressUpdate(DownloadUtil.DownloadParam param, int downloadSize, int totalSize) {
-//                pb_update.setMax(totalSize);
-//                pb_update.setProgress(downloadSize);
             }
 
             @Override
             public void downloadEnd(DownloadUtil.DownloadParam param) {
+                hideLoading();
                 if (param.getSaveFile().exists()) {
                     IntentUtils.installApk(mActivity, param.getSaveFile());
                 }
-//                pb_update.setVisibility(View.GONE);
-//                tv_update.setVisibility(View.VISIBLE);
             }
         }).download(downloadParam);
     }
