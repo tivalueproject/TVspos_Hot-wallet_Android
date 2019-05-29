@@ -58,6 +58,17 @@
             <!--android:name="PGYER_APPID"-->
             <!--android:value="88d214cf3f3337d9f21b327c0c7af901" >-->
         <!--</meta-data>-->
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="systems.v.wallet.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/external_storage_path" />
+        </provider>
+
         <activity
             android:name=".ui.view.SplashActivity"
             android:label="@string/app_name">
