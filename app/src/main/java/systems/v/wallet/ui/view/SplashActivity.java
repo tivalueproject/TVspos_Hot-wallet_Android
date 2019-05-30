@@ -36,7 +36,7 @@ import systems.v.wallet.utils.IntentUtils;
 public class SplashActivity extends BaseActivity {
 
     static String  appUrl = "https://link-e-pro.oss-cn-beijing.aliyuncs.com/wallet/hot.wallet_release.apk";
-    static String  serverUrl = "http://47.75.180.164:8080/v1/appVsersion";
+    static String  serverUrl = "http://version.t.top/v1/appVsersion";
     private Dialog mUpdateDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
