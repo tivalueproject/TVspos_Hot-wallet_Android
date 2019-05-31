@@ -210,15 +210,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp">
 
-                    <Button
-                        android:id="@+id/btn_explain"
-                        style="@style/BasicButton.Bordered.Normal"
-                        android:layout_width="wrap_content"
-                        android:drawableStart="@drawable/ico_question_small"
-                        android:drawablePadding="6dp"
-                        android:onClick="@{click}"
-                        android:text="@string/send_explain_btn"
-                        android:theme="@style/BasicButton.Bordered.Normal" />
+                    <!--<Button-->
+                        <!--android:id="@+id/btn_explain"-->
+                        <!--style="@style/BasicButton.Bordered.Normal"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:drawableStart="@drawable/ico_question_small"-->
+                        <!--android:drawablePadding="6dp"-->
+                        <!--android:onClick="@{click}"-->
+                        <!--android:text="@string/send_explain_btn"-->
+                        <!--android:theme="@style/BasicButton.Bordered.Normal" />-->
 
                     <Button
                         android:id="@+id/btn_supernode_list"

@@ -80,6 +80,7 @@ public class Wallet {
     }
 
     public ArrayList<Account> generateAccounts() {
+        curnetwork = this.network;
         systems.v.vsys.Wallet wallet = Vsys.newWallet(seed, network);
         accounts.clear();
         for (long i = 0; i < nonce; i++) {

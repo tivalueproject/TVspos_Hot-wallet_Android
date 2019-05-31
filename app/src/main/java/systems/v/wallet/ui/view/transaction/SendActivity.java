@@ -176,17 +176,17 @@ public class SendActivity extends BaseThemedActivity implements View.OnClickList
                 ResultActivity.launch(this, mAccount.getPublicKey(), mTransaction);
             }
             break;
-            case R.id.btn_explain: {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://supernode.t.top"));
-                mActivity.startActivity(intent);
-            }
-            break;
+//            case R.id.btn_explain: {
+//                Intent intent = new Intent();
+//                intent.setAction(Intent.ACTION_VIEW);
+//                intent.setData(Uri.parse("https://exp.t.top"));
+//                mActivity.startActivity(intent);
+//            }
+//            break;
             case R.id.btn_supernode_list: {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://supernode.t.top"));
+                intent.setData(Uri.parse("http://exp.t.top"));
                 mActivity.startActivity(intent);
             }
             break;
