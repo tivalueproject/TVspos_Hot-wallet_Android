@@ -102,11 +102,15 @@ public class Wallet {
     }
 
     public static String getAddress(String network, String publicKey) {
-        return Vsys.newAccount(network, publicKey).address();
+        //return Vsys.newAccount(network, publicKey).address();
+        return Account.createAddress(publicKey,network,VERSION);
     }
 
     public static boolean validateAddress(String address) {
 //        return Vsys.validateAddress(address);
+        if(address.isEmpty()){
+            return false;
+        }
         byte[] btAddress = Base58.decode(address);
         if (btAddress[0] != Integer.parseInt(VERSION)){
             return false;

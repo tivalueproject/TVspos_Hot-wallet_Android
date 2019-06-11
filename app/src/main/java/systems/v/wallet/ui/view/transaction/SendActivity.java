@@ -49,6 +49,7 @@ public class SendActivity extends BaseThemedActivity implements View.OnClickList
     }
 
     private static final String TAG = "SendActivity";
+    private final int  MaxAttachmentSize = 140;
 
     private ActivitySendBinding mBinding;
     private Transaction mTransaction;
@@ -151,6 +152,7 @@ public class SendActivity extends BaseThemedActivity implements View.OnClickList
             case R.id.btn_confirm: {
                 String amount = mBinding.etAmount.getText().toString();
                 String address = mBinding.etAddress.getText().toString();
+                String attach = mBinding.etAttachment.getText().toString();
                 int textId = 0;
                 if (TextUtils.isEmpty(amount)) {
                     textId = R.string.send_amount_empty_error;
@@ -160,6 +162,8 @@ public class SendActivity extends BaseThemedActivity implements View.OnClickList
                     textId = R.string.send_address_input_error;
                 } else if (address.equals(mAccount.getAddress())) {
                     textId = R.string.send_to_self_error;
+                } else if (attach.length() > MaxAttachmentSize) {
+                    textId = R.string.send_to_attach_error;
                 }
                 if (textId != 0) {
                     new AlertDialog.Builder(mActivity)
