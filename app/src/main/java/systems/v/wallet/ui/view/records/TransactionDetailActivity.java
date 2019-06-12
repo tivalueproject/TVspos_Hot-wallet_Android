@@ -81,8 +81,14 @@ public class TransactionDetailActivity extends BaseThemedActivity implements Vie
                 UIUtil.copyToClipboard(mActivity, mRecord.getRecipient());
             }
         });
-        UIUtil.addItemVertical(inflater, container, R.string.transaction_detail_txid,
+        ItemTransactionInfoVerticalBinding bindingId = UIUtil.addItemVertical(inflater, container, R.string.transaction_detail_txid,
                 mRecord.getId());
+        bindingId.getRoot().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UIUtil.copyToClipboard(mActivity, mRecord.getId());
+            }
+        });
         UIUtil.addItemVertical(inflater, container, R.string.transaction_detail_type,
                 TxRecordUtil.getTypeText(this, mRecord.getRecordType()));
         UIUtil.addItemVertical(inflater, container, R.string.transaction_detail_amount,
