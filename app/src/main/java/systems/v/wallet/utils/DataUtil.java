@@ -20,6 +20,9 @@ public class DataUtil {
                     return false;
                 }
             }
+            if(entity.getRecordType() == RecordEntity.TYPE_START_IN_LEASING){
+                return false;
+            }
         }
         return true;
     }
