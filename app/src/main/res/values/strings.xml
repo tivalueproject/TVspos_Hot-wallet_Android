@@ -256,6 +256,6 @@
 
     <!--init start-->
     <string name="wallet_init_official_warning_dialog_msg">To ensure the security of your personal property, please make sure that your wallet APP is downloaded from t.top, the official website of TV</string>
-    <string name="first_enter_tips">You can download a cold wallet from the v.stems website with a phone that you barely use and can completely disconnect from the Internet</string>
+    <string name="first_enter_tips">You can download a cold wallet from the t.top website with a phone that you barely use and can completely disconnect from the Internet</string>
     <!--init end-->
 </resources>
