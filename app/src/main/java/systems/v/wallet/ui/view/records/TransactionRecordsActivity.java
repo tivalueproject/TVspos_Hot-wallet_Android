@@ -117,8 +117,8 @@ public class TransactionRecordsActivity extends BaseThemedActivity implements Vi
                             }
                             mData.clear();
                             mData.addAll(recordEntityList);
-                            notifyDataChange();
                         }
+                        notifyDataChange();
                     }
                 }, new Consumer<Throwable>() {
                     @Override
