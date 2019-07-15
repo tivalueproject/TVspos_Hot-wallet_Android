@@ -111,27 +111,31 @@ public class Wallet {
         if(address.isEmpty()){
             return false;
         }
-        byte[] btAddress = Base58.decode(address);
-        if (btAddress[0] != Integer.parseInt(VERSION)){
-            return false;
-        }else if (btAddress[1] != (byte)curnetwork.hashCode()){
-            return false;
-        }else if (btAddress.length != AddressLength){
-            return false;
-        }else {
-            byte[] btCheck = new byte[ChecksumLength];
-            System.arraycopy(btAddress, HashLength + 2, btCheck, 0, ChecksumLength);
+        try {
+            byte[] btAddress = Base58.decode(address);
+            if (btAddress[0] != Integer.parseInt(VERSION)){
+                return false;
+            }else if (btAddress[1] != (byte)curnetwork.hashCode()){
+                return false;
+            }else if (btAddress.length != AddressLength){
+                return false;
+            }else {
+                byte[] btCheck = new byte[ChecksumLength];
+                System.arraycopy(btAddress, HashLength + 2, btCheck, 0, ChecksumLength);
 
-            byte[] btWithoutCheck = new byte[AddressLength - ChecksumLength];
-            System.arraycopy(btAddress, 0, btWithoutCheck, 0, AddressLength - ChecksumLength);
+                byte[] btWithoutCheck = new byte[AddressLength - ChecksumLength];
+                System.arraycopy(btAddress, 0, btWithoutCheck, 0, AddressLength - ChecksumLength);
 
-            byte[] btCheckResult = Vsys.hashChain(btWithoutCheck);
-            for(int i = 0; i < ChecksumLength; i++){
-                if(btCheck[i] != btCheckResult[i]){
-                    return false;
+                byte[] btCheckResult = Vsys.hashChain(btWithoutCheck);
+                for(int i = 0; i < ChecksumLength; i++){
+                    if(btCheck[i] != btCheckResult[i]){
+                        return false;
+                    }
                 }
+                return true;
             }
-            return true;
+        } catch (Exception e ) {
+            return false;
         }
     }
 
