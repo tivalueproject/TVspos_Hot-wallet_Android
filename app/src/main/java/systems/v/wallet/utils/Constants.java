@@ -2,8 +2,8 @@ package systems.v.wallet.utils;
 
 public class Constants {
     //public static final String MAIN_NET_API_SERVER = "https://wallet.v.systems/api/";
-    public static final String MAIN_NET_API_SERVER = "https://xxx.t.top/api/";
-    public static final String TEST_NET_API_SERVER = "https://testxxx.t.top/api/";
+    public static final String MAIN_NET_API_SERVER = "https://qb.t.top/api/";
+    public static final String TEST_NET_API_SERVER = "https://testqb.t.top/api/";
     public static final String NETWORK_ENVIRONMENT = "network";
     public static final String MONITOR = "monitor";
     public static final String AUTO_LOCK = "auto_lock";
