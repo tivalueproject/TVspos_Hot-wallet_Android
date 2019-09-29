@@ -63,14 +63,14 @@ public class SplashActivity extends BaseActivity {
                                                 public void onClick(DialogInterface dialog, int which) {
                                                     DownloadApp(appUrl,String.valueOf(serverVersion));
                                                 }
+                                            })
+                                            .setNegativeButton(R.string.basic_alert_dialog_cancel, new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialog, int which) {
+                                                    dialog.dismiss();
+                                                    launch();
+                                                }
                                             }).create();
-//                                            .setNegativeButton(R.string.basic_alert_dialog_cancel, new DialogInterface.OnClickListener() {
-//                                                @Override
-//                                                public void onClick(DialogInterface dialog, int which) {
-//                                                    dialog.dismiss();
-//                                                    launch();
-//                                                }
-//                                            }).create();
                                 }
                                 mUpdateDialog.setCanceledOnTouchOutside(false);
                                 mUpdateDialog.show();
