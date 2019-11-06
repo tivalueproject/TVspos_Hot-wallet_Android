@@ -95,7 +95,7 @@ public class TransactionRecordsActivity extends BaseThemedActivity implements Vi
     }
 
     private void getRecords(final String address) {
-        Disposable d = RetrofitHelper.getInstance().getNodeAPI().records(address, 1000)
+        Disposable d = RetrofitHelper.getInstance().getNodeAPI().records(address, 10000)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<RespBean>() {
